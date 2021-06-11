@@ -1,0 +1,36 @@
+.heading{
+    width: 100%;
+    font-size: 24px;
+    box-shadow: 5px 5px 18px grey;
+    margin: 0px;
+}
+.note{
+    font-size: 15px;
+    color: springgreen;
+}
+.copy_right_footer{
+    position: fixed;
+    bottom: 0;
+    background-color: palevioletred;
+    color: white;
+    width: 100%;
+    line-height: 3;
+    text-align: center;
+}
+canvas{
+    border:10px solid palevioletred;
+    border-radius: 20px;
+    box-shadow: 5px 5px 18px grey;
+}
+video{
+    border:5px solid palevioletred;
+    box-shadow: 5px 5px 18px grey;
+}
+#text{
+    width: 40%;
+    box-shadow: 5px 5px 18px grey;
+}
+#enter{
+    width: 20%;
+    box-shadow: 5px 5px 18px grey;
+}
