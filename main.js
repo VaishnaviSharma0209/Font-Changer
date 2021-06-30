@@ -1,3 +1,9 @@
+noseX=0;
+noseY=0;
+difference=0;
+lwristX=0;
+rwristX=0;
+text=0;
 function setup(){
     canvas=createCanvas(400,400);
     canvas.center();
@@ -9,7 +15,11 @@ function setup(){
     poseNet.on('pose',gotPoses)
 }
 function draw(){
-    background("springgreen")
+    background("springgreen");
+    var text=document.getElementById("text");
+    document.getElementById("size").innerHTML=difference;
+    textSize(difference);
+    text(text,noseX,noseY);
 }
 function modelLoaded(){
     console.log("Posenet loaded")
@@ -17,5 +27,11 @@ function modelLoaded(){
 function gotPoses(results){
     if (results.length>0){
         console.log(results);
+        noseX=results[0].pose.nose.x;
+        noseY=results[0].pose.nose.y;
+        lwrisrtX=results[0].pose.leftWrist.x;
+        rwrisrtX=results[0].pose.rightWrist.x;
+        difference=floor(lwrisrtX-rwrisrtX);
+
     }
 }
